@@ -33,5 +33,5 @@ Una vez tenga disponible todo lo anterior, se abrirá en el navegador el front p
 **Francisco José MacAllister Ortiz**
 
 ## Licencia
-Consulte aca: [Licencia]("./Licence")
+Consulte aca: [Licencia](https://github.com/fj-mac/Visualizacion-datos.gov.co/blob/master/LICENSE)
 
