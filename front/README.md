@@ -25,7 +25,7 @@ $npm install navío
 4.	Para poder comenzar a ver la ventana de desarrollador del front de este programa, utilice los siguientes códigos (asegúrese de estar en front):
 $yarn start
 5.	En caso de tener cualquier problema, elimine las carpetas node_modules de la raíz así como package-json.lock . Repita las instrucciones anteriores. 
-##Ejecucion:
+## Ejecucion:
 Una vez tenga disponible todo lo anterior, se abrirá en el navegador el front para poder realizar las modificaciones en tiempo real. En caso de que no se abra, por favor ábralo manualmente e ingrese la siguiente url: localhost:3000.
 
 ## Autor
