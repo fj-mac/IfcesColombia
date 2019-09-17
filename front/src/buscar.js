@@ -10,7 +10,8 @@ class buscar extends Component  {
       datosAPI: [],
       loading:false,
       termino:false,
-      tamano:800
+      tamano:800,
+      historial:[]
 
     }
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,14 +26,22 @@ class buscar extends Component  {
     }
     );
   }
+  concatenar(a,b){
+    a=a.push(b);
+  };
 
   handleSubmit(event) {
     this.setState({loading:true})
     this.setState({termino:false});
     event.preventDefault();
     let url=this.state.ApiBuscada;
+    let historialtempo=this.state.historial;
+    historialtempo=this.concatenar(historialtempo,url);
+    this.setState({historial:historialtempo});
+    console.log("Hasta el momento el historial es: "+this.state.historial);
+    this.setState({termino:false});
      this.setState({loading:true})
-     fetch(url+"?$limit=1234&$offset=0")
+     fetch(url+"?$limit=99999999&$offset=0")
       .then(response => response.json())
       .then(response => {
           let datos=response;
@@ -70,6 +79,7 @@ render(){
       <div className="col-md-2">
        {this.state.loading? <div className="loader"></div>:<div></div>}
       </div>
+        {this.state.termino? <div><div/></div>:<h1>Sus resultados se evidencian a continuacion</h1>}
         {this.state.termino? <div><Navioo datos={this.state.datosAPI} altura={this.state.tamano}/></div>:<div></div>}
 
       </div>

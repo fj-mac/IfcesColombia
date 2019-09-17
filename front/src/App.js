@@ -19,7 +19,6 @@ render(){
   return (
     <div>
       <Buscar/>
-
     </div>
   )
 }
