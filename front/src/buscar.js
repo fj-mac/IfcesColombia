@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import "./buscar.css";
-
+import Navioo from "./Navioo.js";
 
 class buscar extends Component  {
  constructor(props){
     super(props);
     this.state = {
       ApiBuscada: "",
-      datosAPI: [],
+      datosAPI: [0],
       loading:false,
       encontrados: false
     }
@@ -22,9 +22,6 @@ class buscar extends Component  {
     }
     );
   }
-
-
-
 
   handleSubmit(event) {
      event.preventDefault();
@@ -68,6 +65,7 @@ render(){
       <div className="col-md-2">
        {this.state.loading || (this.state.bottom==null)? <div className="loader"></div>:<div></div>}
       </div>
+        <Navioo/>
       </div>
     </div>
   )
