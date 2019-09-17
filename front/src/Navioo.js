@@ -6,7 +6,7 @@ class Navioo extends Component  {
     super(props);
     this.state = {
 
-      datos:props.datosAPI,
+      datos:props.datos,
       altura:props.tamano
 
     }

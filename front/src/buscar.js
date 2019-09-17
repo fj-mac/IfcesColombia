@@ -10,7 +10,7 @@ class buscar extends Component  {
       datosAPI: [],
       loading:false,
       termino:false,
-      tamano:600
+      tamano:800
 
     }
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,6 +18,7 @@ class buscar extends Component  {
   }
 
   handleAPIChange(event) {
+    this.setState({termino:false})
     let valor=event.target.value;
     this.setState({ ApiBuscada: valor }, ()=>{
       console.log("Se ha seleccionado el api: "+ valor)
@@ -26,15 +27,14 @@ class buscar extends Component  {
   }
 
   handleSubmit(event) {
-     event.preventDefault();
-     let url=this.state.ApiBuscada;
-    this.setState({loading:true})
-     fetch(url)
+    event.preventDefault();
+    let url=this.state.ApiBuscada;
+     this.setState({loading:true})
+     fetch(url+"?$limit=1234&$offset=0")
       .then(response => response.json())
       .then(response => {
           let datos=response;
           this.setState({ datosAPI: datos });
-          console.log(this.state.datosAPI);
           this.setState({loading:false});
           this.setState({termino:true});
       })
