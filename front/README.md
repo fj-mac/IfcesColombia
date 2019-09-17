@@ -30,7 +30,7 @@ Una vez tenga disponible todo lo anterior, se abrirá en el navegador el front p
 
 ## Autor
 
-**Francisco José MacAllister Ortiz**
+**Francisco José MacAllister Ortiz**[Consulte aca](https://github.com/fj-mac)
 
 ## Licencia
 Consulte aca: [Licencia](https://github.com/fj-mac/Visualizacion-datos.gov.co/blob/master/LICENSE)
