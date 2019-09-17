@@ -10,7 +10,7 @@ Se utiliza react para la construcción básica de la aplicación y Navio para la
 ## Preparación
 Para poder trabajar localmente con este proyecto, abra en la terminal del equipo la ubicación de la carpeta donde desee poner la capeta raíz. Después (asegurándose de tener git instalado):
 $ git clone: https://github.com/fj-mac/Visualizacion-datos.gov.co.git
-##Prerrequisitos
+## Prerrequisitos
 Instalacion de nodeJS: https://nodejs.org/es/
 Instalación de yarn(desde la línea de comando): $ npm install -g yarn
 ## Para preparar ejecución
