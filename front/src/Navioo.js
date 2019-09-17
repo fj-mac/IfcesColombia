@@ -6,40 +6,32 @@ class Navioo extends Component  {
     super(props);
     this.state = {
 
+      datos:props.datosAPI,
+      altura:props.tamano
+
     }
   }
 
 componentDidMount()
 {
-  console.log(this.myDiv);
   this.update();
-}
-update(){
-  nv=new navio(this.myDiv,600)
 }
 componentDidUpdate()
 {
-
+  this.update();
 }
-navioStart()
-{
-  let nv = navio(d3.select("#navio"), 600);
-  nv.data(data);
+
+update(){
+  let nv = new navio(this.myDiv, this.state.altura);
+  nv.data(this.state.datos);
   nv.addAllAttribs();
 }
-//const nv=new navio(this.myDiv,600)
+
 
 render(){
 
   return (
-    <div>
-      <div
-        type="text"
-        ref={myDiv=>this.myDiv=myDiv}
-        value={this.state.inValue}
-        onChange={this.onChange.bind(this)}
-      />
-    </div>
+      <div ref={myDiv=>this.myDiv=myDiv}> </div>
   )
 }
 }

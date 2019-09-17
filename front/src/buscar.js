@@ -7,9 +7,11 @@ class buscar extends Component  {
     super(props);
     this.state = {
       ApiBuscada: "",
-      datosAPI: [0],
+      datosAPI: [],
       loading:false,
-      encontrados: false
+      termino:false,
+      tamano:600
+
     }
       this.handleSubmit = this.handleSubmit.bind(this);
       this.handleAPIChange = this.handleAPIChange.bind(this);
@@ -33,7 +35,8 @@ class buscar extends Component  {
           let datos=response;
           this.setState({ datosAPI: datos });
           console.log(this.state.datosAPI);
-          this.setState({loading:false})
+          this.setState({loading:false});
+          this.setState({termino:true});
       })
       .catch(error=>console.log("No sirve el fetch", error))
   }
@@ -63,9 +66,10 @@ render(){
       <div className="col-md-5">
       </div>
       <div className="col-md-2">
-       {this.state.loading || (this.state.bottom==null)? <div className="loader"></div>:<div></div>}
+       {this.state.loading? <div className="loader"></div>:<div></div>}
       </div>
-        <Navioo/>
+        {this.state.termino? <div><Navioo datos={this.state.datosAPI} altura={this.state.tamano}/></div>:<div></div>}
+
       </div>
     </div>
   )
