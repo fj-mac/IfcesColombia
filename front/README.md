@@ -1,68 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Visualización con API datos.gov.co
+## Objetivo
 
-## Available Scripts
+El objetivo de este proyecto github es conectar los diferentes apis disponibles en la pagina datos.gov.co con una interfaz de visualización (NAVIO)
+## Tecnologías usadas
+•	ReactJs
+•	Navio (www.navio.dev)
+Se utiliza react para la construcción básica de la aplicación y Navio para la visualización de los datos que el usuario ingresa por un api. 
+#Para correr el proyecto
+## Preparación
+Para poder trabajar localmente con este proyecto, abra en la terminal del equipo la ubicación de la carpeta donde desee poner la capeta raíz. Después (asegurándose de tener git instalado):
+$ git clone: https://github.com/fj-mac/Visualizacion-datos.gov.co.git
+##Prerrequisitos
+Instalacion de nodeJS: https://nodejs.org/es/
+Instalación de yarn(desde la línea de comando): $ npm install -g yarn
+## Para preparar ejecución
+1.	Verificar que se tiene node.js instalado (en cado de no tenerlo debe instalarlo)
+$ node -v
+2.	Utilice el siguiente comando:
+$ npm install
+3.	Utilice los siguientes comandos:
+$cd front
+	$ npm install
+$npm install navío
+4.	Para poder comenzar a ver la ventana de desarrollador del front de este programa, utilice los siguientes códigos (asegúrese de estar en front):
+$yarn start
+5.	En caso de tener cualquier problema, elimine las carpetas node_modules de la raíz así como package-json.lock . Repita las instrucciones anteriores. 
+##Ejecucion:
+Una vez tenga disponible todo lo anterior, se abrirá en el navegador el front para poder realizar las modificaciones en tiempo real. En caso de que no se abra, por favor ábralo manualmente e ingrese la siguiente url: localhost:3000.
 
-In the project directory, you can run:
+## Autor
 
-### `npm start`
+**Francisco José MacAllister Ortiz**
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Licencia
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
