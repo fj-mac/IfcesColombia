@@ -41,7 +41,7 @@ class buscar extends Component  {
     console.log("Hasta el momento el historial es: "+this.state.historial);
     this.setState({termino:false});
      this.setState({loading:true})
-     fetch(url+"?$limit=99999999&$offset=0")
+     fetch(url+"?$limit=9999&$offset=0")
       .then(response => response.json())
       .then(response => {
           let datos=response;
@@ -79,7 +79,7 @@ render(){
       <div className="col-md-2">
        {this.state.loading? <div className="loader"></div>:<div></div>}
       </div>
-        {this.state.termino? <div><div/></div>:<h1>Sus resultados se evidencian a continuacion</h1>}
+        {this.state.termino? <h1>Sus resultados se evidencian a continuacion</h1>:<div></div>}
         {this.state.termino? <div><Navioo datos={this.state.datosAPI} altura={this.state.tamano}/></div>:<div></div>}
 
       </div>
