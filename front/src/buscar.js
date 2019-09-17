@@ -27,6 +27,8 @@ class buscar extends Component  {
   }
 
   handleSubmit(event) {
+    this.setState({loading:true})
+    this.setState({termino:false});
     event.preventDefault();
     let url=this.state.ApiBuscada;
      this.setState({loading:true})
