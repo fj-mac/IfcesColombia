@@ -34,4 +34,8 @@ Una vez tenga disponible todo lo anterior, se abrirá en el navegador el front p
 
 ## Licencia
 Consulte aca: [Licencia](https://github.com/fj-mac/Visualizacion-datos.gov.co/blob/master/LICENSE)
+## Imagen(Captura de pantalla)
+![alt text](https://raw.githubusercontent.com/fj-mac/Visualizacion-datos.gov.co/master/captura.PNG)
 
+## Página desplegada
+https://verdatoscolombia.herokuapp.com/
