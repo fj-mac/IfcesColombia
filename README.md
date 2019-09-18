@@ -39,3 +39,9 @@ Consulte aca: [Licencia](https://github.com/fj-mac/Visualizacion-datos.gov.co/bl
 
 ## Página desplegada
 https://verdatoscolombia.herokuapp.com/
+
+## Componentes creativos
+1. Se tiene una animación mientras se carga la información necesaria
+2. Se evidencia cual fue la api consultada inmediatamente anterior
+3. Se permite la modificación de la ventana para Navio
+
