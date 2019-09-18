@@ -43,7 +43,6 @@ class buscar extends Component  {
     this.setState({termino:false});
     event.preventDefault();
     let url=this.state.ApiBuscada;
-    let historialtempo=this.state.historial;
     if(this.state.historial==="vacio"){
       this.setState({historial:url});
     }
