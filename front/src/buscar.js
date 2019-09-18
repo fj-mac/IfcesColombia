@@ -10,12 +10,20 @@ class buscar extends Component  {
       datosAPI: [],
       loading:false,
       termino:false,
-      tamano:800,
-      historial:[]
+      segunda:false,
+      tamano:600,
+      historial:"vacio"
 
     }
       this.handleSubmit = this.handleSubmit.bind(this);
       this.handleAPIChange = this.handleAPIChange.bind(this);
+      this.handleSizeChange = this.handleAPIChange.bind(this);
+  }
+  handleSizeChange(event){
+    event.preventDefault();
+    let valor=parseInt(event.target.value);
+    this.setState({ tamano: valor }
+    );
   }
 
   handleAPIChange(event) {
@@ -36,12 +44,17 @@ class buscar extends Component  {
     event.preventDefault();
     let url=this.state.ApiBuscada;
     let historialtempo=this.state.historial;
-    historialtempo=this.concatenar(historialtempo,url);
-    this.setState({historial:historialtempo});
+    if(this.state.historial==="vacio"){
+      this.setState({historial:url});
+    }
+    else
+    {
+      this.setState({segunda:true});
+    }
     console.log("Hasta el momento el historial es: "+this.state.historial);
     this.setState({termino:false});
      this.setState({loading:true})
-     fetch(url+"?$limit=9999&$offset=0")
+     fetch(url+"?$limit=99999&$offset=0")
       .then(response => response.json())
       .then(response => {
           let datos=response;
@@ -74,6 +87,12 @@ render(){
         </div>
       </div>
       <div className="row">
+          <h1>Ingrese el tamaño de la ventana que desea (recomentdado 600)</h1>
+         <input id="input" type="text" className="form-control"
+           onChange={this.handleSizeChange}/>
+      </div>
+      {this.state.segunda? <h1>Usted ya consulto el API: {this.state.historial}</h1>:<div></div>}
+      <div className="row">
       <div className="col-md-5">
       </div>
       <div className="col-md-2">
@@ -81,7 +100,6 @@ render(){
       </div>
         {this.state.termino? <h1>Sus resultados se evidencian a continuacion</h1>:<div></div>}
         {this.state.termino? <div><Navioo datos={this.state.datosAPI} altura={this.state.tamano}/></div>:<div></div>}
-
       </div>
     </div>
   )
